@@ -1,0 +1,14 @@
+import ET0735_Lab2.bmi as bmi
+print("Test_bmi")
+def test_bmi_normal_weight():
+    result = bmi.calculate_bmi(1.73,60)
+    assert(result==0)
+
+def test_bmi_over_weight():
+    result=bmi.calculate_bmi(1.73,80)
+    assert (result==1)
+
+def test_bmi_under_weight():
+    result=bmi.calculate_bmi(1.73,45)
+    assert(result==-1)
+
